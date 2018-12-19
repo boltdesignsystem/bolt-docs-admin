@@ -1,0 +1,53 @@
+# https://www.netlifycms.org/docs/intro
+backend:
+  name: github
+  repo: bolt-design-system/bolt
+  branch: master
+
+publish_mode: editorial_workflow
+squash_merges: true
+
+media_folder: "apps/bolt-site/images/"
+public_folder: "/images"
+
+collections:
+  - name: "docs-getting-started" # Used in routes, e.g., /admin/collections/docs
+    label: "Docs: Getting Started" # Used in the UI
+    folder: "apps/bolt-site/pages/20-docs/00-getting-started" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "docs-design-principles" # Used in routes, e.g., /admin/collections/docs
+    label: "Docs: Design Principles" # Used in the UI
+    folder: "apps/bolt-site/pages/20-docs/25-design-principles" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "docs-ui-patterns" # Used in routes, e.g., /admin/collections/docs
+    label: "Docs: UI Patterns" # Used in the UI
+    folder: "apps/bolt-site/pages/20-docs/30-ui-patterns" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "docs-visual-design" # Used in routes, e.g., /admin/collections/docs
+    label: "Docs: Visual Design" # Used in the UI
+    folder: "apps/bolt-site/pages/20-docs/40-visual-design" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "docs-guides" # Used in routes, e.g., /admin/collections/docs
+    label: "Docs: Guides" # Used in the UI
+    folder: "apps/bolt-site/pages/20-docs/50-guides" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
